@@ -137,7 +137,7 @@ function processLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions){
     const learnerData = [];
 
   
-  for (let i = 0; i < LearnerSubmissions.length; i++) 
+  for (let i = 0; i < LearnerSubmissions.length; i++) {
     const submission = LearnerSubmissions[i];
     const learnerID = submission.learner_id;  
     const assignmentID = submission.assignment_id;  
