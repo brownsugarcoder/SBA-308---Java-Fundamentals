@@ -150,6 +150,7 @@ function processLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions){
       console.log("Submission in not due.");
       continue;  
     }
+  }
     // if assignment is due/correct include data in array
 
     const score = submission.submission.score;
