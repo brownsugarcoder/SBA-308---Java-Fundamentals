@@ -128,7 +128,7 @@ function processLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions){
 } 
   
   // check if AssignmentGroup is in the correct course
-  if (CourseInfo.id !== AssignmentGroup.course_id) {
+  if (courseInfo.id !== AssignmentGroup.course_id) {
      throw new Error("Incorrect AssignmentGroup ");
   }
   
@@ -150,7 +150,7 @@ function processLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions){
       console.log("Submission in not due.");
       continue;  
     }
-  }
+  
     // if assignment is due/correct include data in array
 
     const score = submission.submission.score;
@@ -178,6 +178,7 @@ function processLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions){
       assignmentID: assignmentID,
       percentage: (score / pointsPossible) * 100
     });
-
-    return { learnerData, assignmentScores };
+   
   }
+    
+  
